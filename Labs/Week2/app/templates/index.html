@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+
+<head>
+    {% if title %}
+        <title>{{ title }} - Lab Class Week TWO </title>
+    {% else %}
+        <title>Welcome to Lab Class Week TWO!</title>
+    {% endif %}
+</head>
+
+<body>
+    {% if user.username == "Onting" %}
+        <h1>Hello, {{ user.username }}!</h1>
+    {% else %}
+        <h1>Hello, {{ user.username }}!</h1>
+    {% endif %}
+</body>
+
+</html>
