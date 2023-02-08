@@ -10,11 +10,24 @@
 </head>
 
 <body>
-    {% if user.username == "Onting" %}
-        <h1>Hello, {{ user.username }}!</h1>
-    {% else %}
-        <h1>Hello, {{ user.username }}!</h1>
-    {% endif %}
+<!--    {% if user.username %}-->
+<!--        <h1>Hello, {{ user.username }}!</h1>-->
+<!--        {% else %}-->
+<!--        <form action="{{ url_for('data_input')}}" method="post">-->
+<!--            <label for="username">Enter username:</label>-->
+<!--            <input type="text" id="username" name = "username">-->
+<!--            <input type="submit" value="Submit">-->
+<!--        </form>-->
+<!--        {% endif %}-->
+        {% if user.username == "Onting" %}
+            <h1>Hello, {{ user.username }}!</h1>
+        {% else %}
+            <h1>Welcome, {{ user.username }}!</h1>
+        {% endif %}
+
+        {% for labclass in labclasses %}
+            <div><p> The lab in week number <i>{{ labclass.weekno }}</i> was about : <b>{{ labclass.content }}</b></p></div>
+        {% endfor %}
 </body>
 
 </html>
